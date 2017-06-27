@@ -58,11 +58,11 @@ public class SetCartMotion : MonoBehaviour {
 								motion._Pitch= pitch;
 		
 		/*Getting Roll float value  (around local forward axis)*/
-		var fwd = transform.forward;
-			fwd.y = 0;
-				fwd *= Mathf.Sign(transform.up.y);
-					var right = Vector3.Cross(Vector3.up, fwd).normalized;
-						float roll = Vector3.Angle(right, transform.right) * Mathf.Sign(transform.right.y);
+		var fwdr = transform.forward;
+			fwdr.y = 0;
+				fwdr *= Mathf.Sign(transform.up.y);
+					var Pright = Vector3.Cross(Vector3.up, fwdr).normalized;
+							float roll = Vector3.Angle(Pright, transform.right) * Mathf.Sign(transform.right.y);
 									motion._Roll = roll;
 		
 ///////////////	EDITED VERSION END ///////////////	
